@@ -1,103 +1,113 @@
-html,
-body {
-  min-width: 290px;
-  color: #4d4e53;
-  background-color: #ffffff;
-  font-family: 'Open Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
+html, body {
+  font-family: 'Lato', Arial, sans-serif;
+  background-color: rgb(9, 1, 10);
+  color: white;
+  line-height: 1.3;
+}
 #navbar {
-  
-  min-width: 290px;
+  position: fixed;
   top: 0px;
   left: 0px;
-  width: 300px;
+  width: 323px;
   height: 100%;
-  border-right: solid;
-  border-color: rgba(0, 22, 22, 0.4);
-  position: fixed;
+  border: 1px solid white;
+  overflow-y: scroll;
 }
-
 header {
-  color: rgb(241, 44, 44);
-  margin: 10px;
+  font-size: 31px;
+  margin: 7px;
   text-align: center;
-  font-size: 1.8em;
-  font-weight: thin;
 }
-
-#main-doc header {
-  text-align: left;
-  margin: 0px;
-}
-
-#navbar ul {
-  height: 88%;
-  padding: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-#navbar li {
-  color: #4d4e53;
-  border-top: 1px solid;
-  list-style: none;
-  position: relative;
-  width: 100%;
-}
-
-#navbar a {
-  display: block;
-  padding: 10px 30px;
-  color: #4d4e53;
+.nav-link {
+  padding: 3px;
   text-decoration: none;
   cursor: pointer;
-  position: fixed;
 }
-
+#navbar li {
+  color: white;
+  border: 1px solid;
+  padding: 7px;
+  list-style: none;
+  position: relative;
+  right: 17px;
+}
 #main-doc {
   position: absolute;
-  margin-left: 310px;
-  padding: 20px;
-  margin-bottom: 110px;
+  margin-left: 311px;
+  margin-bottom: 109px;
+  padding: 23px;
 }
-
-section article {
-  color: #4d4e53;
-  margin: 15px;
-  font-size: 0.96em;
+#main-doc header {
+  text-align: left;
+  margin: auto;
+  margin-top: 37px;
 }
-
+#main-doc a {
+  font-weight: bold;
+  color: rgb(38, 15, 214);
+}
+.main-section {
+  margin: 17px;
+}
+p {
+  margin-left: 23px;
+  width: 80%;
+  max-width: 100%;
+}
+h1 {
+  font-size: 2em;
+}
+#heading_code {
+  line-height: .8;
+}
 section li {
-  margin: 15px 0px 0px 20px;
+  margin: 17px 0px 0px 23px;
 }
-
+img {
+  margin-top: 13px;
+  margin-left: 23px;
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 13px;
+  margin-left: 23px;
+  margin-bottom: 31px;
+}
 code {
   display: block;
+  background-color: #eeeeee;
+  color: black;
   text-align: left;
-  white-space: pre-line;
+  white-space: pre-wrap;
   position: relative;
   word-break: normal;
-  word-wrap: normal;
+  width: 79%;
+  max-width: 100%;
   line-height: 2;
-  background-color: #f7f7f7;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
+  padding: 13px;
+  margin: 11px;
+  margin-left: 23px;
+  border-radius: 7px;
 }
-
-@media only screen and (max-width: 815px) {
-  /* For mobile phones: */
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+  padding: 3px;
+}
+@media only screen and (max-width: 736px) {
   #navbar ul {
-    border: 1px solid;
     height: 207px;
-    position: fixed;
   }
-
   #navbar {
-    background-color: white;
     position: absolute;
+    left: 0;
+    right: 0;
     top: 0;
     padding: 0;
     margin: 0;
@@ -105,29 +115,34 @@ code {
     max-height: 275px;
     border: none;
     z-index: 1;
-    border-bottom: 2px solid;
-    position: fixed;
+    border-bottom: 3px solid white;
   }
-
   #main-doc {
     position: relative;
     margin-left: 0px;
     margin-top: 270px;
   }
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+  }
 }
-
-@media only screen and (max-width: 400px) {
+@media only screen 
+  and (max-device-width: 400px) {
   #main-doc {
     margin-left: -10px;
   }
-
   code {
+    font-size: .75em;
     margin-left: -20px;
-    width: 100%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 45px;
+    max-width: 100%;
+    padding: 15px 45px 15px 10px;
     min-width: 233px;
   }
-
+  footer {
+    padding: 3px;
+  }
 }
